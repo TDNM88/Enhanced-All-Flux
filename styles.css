@@ -382,3 +382,32 @@ p, li {
     margin-top: 1rem;
     color: #f4f4f4;
 }
+
+.featured-models {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.model-slider {
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    display: inline-block;
+    width: 100%; /* Đặt 100% cho chiều rộng của slide */
+}
+
+img {
+    width: 100%; /* Ảnh sẽ chiếm toàn bộ chiều rộng của container */
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ của ảnh */
+    max-width: 1152px; /* Đặt giới hạn tối đa nếu cần */
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .model-slider {
+        padding: 10px; /* Tạo khoảng cách nhỏ cho điện thoại */
+    }
+}

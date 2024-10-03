@@ -412,6 +412,11 @@ img {
     }
 }
 
+.language-switcher {
+    display: flex;
+    gap: 10px;
+}
+
 .language-switcher i {
     font-size: 24px;
     color: #333;
@@ -423,19 +428,27 @@ img {
 }
 
 .language-button {
-    background-color: #4CAF50; /* Màu nền */
-    border: none;
-    color: white;
-    padding: 10px 20px;
+    background-color: #4caf5008; /* Màu nền cho nút */
+    border: 1px;
+    padding:1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 12px;
-    box-shadow: 0 4px #999; /* Hiệu ứng nổi 3D */
+    border-radius: 50%; /* Tạo nút tròn */
+    box-shadow: 0 2px #fff6f6; /* Hiệu ứng nổi 3D */
     transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.language-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .language-button:hover {

@@ -1,9 +1,24 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FLUX Enhanced All - TDNM </title>
+    <title>FLUX Enhanced All - TDNM</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            var elements = document.querySelectorAll('[data-en], [data-vi]');
+            elements.forEach(function(element) {
+                if (lang === 'en') {
+                    element.innerText = element.getAttribute('data-en');
+                } else if (lang === 'vi') {
+                    element.innerText = element.getAttribute('data-vi');
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -15,11 +30,16 @@
                             <path d="M12 .587l3.668 7.431 8.18 1.18-5.91 5.744 1.393 8.12L12 18.897l-7.43 3.908 1.393-8.12-5.91-5.744 8.18-1.18z"></path>
                         </svg>
                     </button>
-                    <h1>Flux Enhanced All - made in Vietnam</h1>
+                    <h1 data-en="Flux Enhanced All - made in Vietnam" data-vi="Flux Enhanced All - sản xuất tại Việt Nam">Flux Enhanced All - made in Vietnam</h1>
                 </div>
                 <div class="header-right">
-                    <a href="index.html" id="lounge-button" class="nav-button active">Lounge</a>
-                    <a href="gallery.html" id="gallery-button" class="nav-button">Gallery</a>
+                    <a href="index.html" id="lounge-button" class="nav-button active" data-en="Lounge" data-vi="Phòng chờ">Lounge</a>
+                    <a href="gallery.html" id="gallery-button" class="nav-button" data-en="Gallery" data-vi="Bộ sưu tập">Gallery</a>
+                    <!-- Biểu tượng thay đổi ngôn ngữ -->
+                    <div class="language-switcher">
+                        <button class="language-button" onclick="changeLanguage('en')">English</button>
+                        <button class="language-button" onclick="changeLanguage('vi')">Tiếng Việt</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,39 +50,32 @@
             <div id="content" class="lounge-content">
                 <section class="about-me" style="text-align: center; background-image: url('images/artwork9.jpg'); background-size: cover; background-position: center;">
                     <div style="background-color: rgba(0, 0, 0, 0.8); padding: 20px;">
-                        <h1 class="fade-in" style="color: rgb(200, 197, 57);">Welcome to Flux Enhanced All</h1>
-                        <p class="fade-in">
-This page is a tribute to the journey—capturing every unforgettable moment on the road. Here lies the story of Flux Enhanced All, a model that surpassed over 10,000 Flux variants in the world’s largest AIGC training event of September 2024. .</p>
-                        <h2 class="slide-in" style="margin-bottom: 10px;">Recent Achievements</h2>
+                        <h1 class="fade-in" style="color: rgb(200, 197, 57);" data-en="Welcome to Flux Enhanced All" data-vi="Chào mừng đến với Flux Enhanced All">Welcome to Flux Enhanced All</h1>
+                        <p class="fade-in" data-en="This page is a tribute to the journey—capturing every unforgettable moment on the road. Here lies the story of Flux Enhanced All, a model that surpassed over 10,000 Flux variants in the world’s largest AIGC training event of September 2024." data-vi="Trang này là lời tri ân cho một hành trình—nơi lưu giữ mọi khoảnh khắc đáng nhớ. Đây là câu chuyện về Flux Enhanced All, mô hình đã vượt qua hơn 10.000 biến thể Flux tại sự kiện đào tạo AIGC lớn nhất thế giới vào tháng 9 năm 2024.">This page is a tribute to the journey—capturing every unforgettable moment on the road. Here lies the story of Flux Enhanced All, a model that surpassed over 10,000 Flux variants in the world’s largest AIGC training event of September 2024.</p>
+                        <h2 class="slide-in" style="margin-bottom: 10px;" data-en="Recent Achievements" data-vi="Thành tựu gần đây">Recent Achievements</h2>
                         <div class="achievements-container" style="margin-top: 0;">
                             <ul class="slide-in" style="display: inline-block; text-align: left; font-size: 1.2em;">
-                                <li>🏆 Surpassed over 10,000 competitors from around the globe in a globally anticipated competition for AI models.</li>
-                                <li>🏆 Led after the first quarter of the event and maintained impressive performance to finish with 1,200 points, 200 points ahead of the runner-up. (7-2024)</li>
-                                <li>🥉 Over ６０,000 users utilized the model, generating an estimated 600,000 images</li>
-                                <li>🥉 Became the first LoRA (Low-Rank Adaptation) model to win a major open event for image generation models.</li>
-                                <li>🥉Contributed to cementing Vietnam’s role as a "trainer powerhouse" in the field of AI-generated content.</li>
+                                <li data-en="🏆 Surpassed over 10,000 competitors from around the globe in a globally anticipated competition for AI models." data-vi="🏆 Vượt qua hơn 10.000 đối thủ từ khắp nơi trên thế giới trong một cuộc thi được mong đợi toàn cầu cho các mô hình AI.">🏆 Surpassed over 10,000 competitors from around the globe in a globally anticipated competition for AI models.</li>
+                                <li data-en="🏆 Led after the first quarter of the event and maintained impressive performance to finish with 1,200 points, 200 points ahead of the runner-up. (7-2024)" data-vi="🏆 Dẫn đầu sau 1/4 hành trình đầu tiên của sự kiện và duy trì hiệu suất ấn tượng để kết thúc với 1.200 điểm, hơn 200 điểm so với người về nhì. (7-2024)">🏆 Led after the first quarter of the event and maintained impressive performance to finish with 1,200 points, 200 points ahead of the runner-up. (7-2024)</li>
+                                <li data-en="🥉 Over 60,000 users utilized the model, generating an estimated 600,000 images" data-vi="🥉 Hơn 60.000 người dùng đã sử dụng mô hình, tạo ra ước tính 600.000 hình ảnh">🥉 Over 60,000 users utilized the model, generating an estimated 600,000 images</li>
+                                <li data-en="🥉 Became the first LoRA (Low-Rank Adaptation) model to win a major open event for image generation models." data-vi="🥉 Trở thành mô hình LoRA (Low-Rank Adaptation) đầu tiên giành chiến thắng trong một sự kiện mở lớn cho các mô hình tạo hình ảnh.">🥉 Became the first LoRA (Low-Rank Adaptation) model to win a major open event for image generation models.</li>
+                                <li data-en="🥉 Contributed to cementing Vietnam’s role as a 'trainer powerhouse' in the field of AI-generated content." data-vi="🥉 Góp phần củng cố vai trò của Việt Nam như một 'cường quốc huấn luyện' trong lĩnh vực nội dung do AI tạo ra.">🥉 Contributed to cementing Vietnam’s role as a 'trainer powerhouse' in the field of AI-generated content.</li>
                             </ul>
                         </div>
                     </div>
-                    
-
-                   <section class="featured-models">
-    <div class="model-slider">
-        <div class="slide">
-            <img src="images/big.png" alt="Flux Best Face Ever-Reborn 1">
-        </div>
-    </div>
-</section>
-                    
-    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.44.0/gradio.js"></script>
-    
-    <gradio-app src="https://tdn-m-tams-image-gen.hf.space"></gradio-app>
-    
-    <div class="view-more-container">
-        <a href="gallery.html" class="view-more-button">Enter the Gallery</a>
-    </div>
-                   
-                </div>
+                    <section class="featured-models">
+                        <div class="model-slider">
+                            <div class="slide">
+                                <img src="images/big.png" alt="Flux Best Face Ever-Reborn 1">
+                            </div>
+                        </div>
+                    </section>
+                    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.44.0/gradio.js"></script>
+                    <gradio-app src="https://tdn-m-tams-image-gen.hf.space"></gradio-app>
+                    <div class="view-more-container">
+                        <a href="gallery.html" class="view-more-button" data-en="Enter the Gallery" data-vi="Vào Bộ sưu tập">Enter the Gallery</a>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
@@ -87,5 +100,5 @@ This page is a tribute to the journey—capturing every unforgettable moment on 
     </footer>
 
     <script src="script.js"></script>
-
-</body></html>
+</body>
+</html>
